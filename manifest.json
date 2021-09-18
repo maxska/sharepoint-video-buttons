@@ -1,0 +1,31 @@
+{
+  "name": "Sharepoint Video Buttons",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "description": "Adds useful buttons to the video player in Sharepoint.",
+
+  "icons": 
+  {
+    "128": "icon.png"
+  },
+
+  "browser_action": 
+  {
+    "default_icon": "icon.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    { 
+      "matches": ["*://*.sharepoint.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": ["activeTab"]
+}
+
